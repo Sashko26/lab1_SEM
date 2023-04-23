@@ -2,7 +2,7 @@ const fs= require('fs');
 const loadData= require('./input.js');
 let EuroZoneArray = loadData('input.txt');
 let globalArr =[];
-i=0;
+
 EuroZoneArray.forEach((euroZone)=>{
 	globalArr.push(euroZone.toDoLifeCycle());  
 })
