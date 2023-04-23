@@ -42,6 +42,9 @@ class Country {
     }
   }
   checkCompleteness() {
+	if(this.isCompleteness == true){
+		return true;
+	}
     for (let i = 0; i < this.cities.length; i++) {
       if (!this.cities[i].checkCompleteness()) {
         return false;
