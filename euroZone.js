@@ -125,9 +125,8 @@ class Eurozone {
       (rect1.yh === rect2.yl - 1 &&
         rect1.xl <= rect2.xh &&
         rect1.xh >= rect2.xl) // сусідній зверху
-    ) {
+    )
       return true;
-    }
     return false;
   }
 }
