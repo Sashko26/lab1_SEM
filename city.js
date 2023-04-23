@@ -1,7 +1,8 @@
+const {xMAX,xMIN,yMIN,yMAX}= require('./constans.js');
 class City {
 	constructor(x, y, parent)
 	{
-	  if (x < 1 || x > 10 || y < 1 || y > 10) {
+	  if (x < xMIN || x > xMAX || y < yMIN || y > yMAX) {
 		throw new Error("Incorrect city coordinates. Enter coordinates in the range from 1 to 10.");
 	  } 
 	  this.parent = parent;
