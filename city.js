@@ -1,4 +1,4 @@
-const {xMAX,xMIN,yMIN,yMAX}= require('./constans.js');
+const {xMAX,xMIN,yMIN,yMAX, initBALANCE, DIVISOR}= require('./constans.js');
 class City {
 	constructor(x, y, parent)
 	{
@@ -20,7 +20,7 @@ class City {
 		}
 		else if (this.parent.parent.info[i] === this.parent.name)
 		{
-			this.account.push({balance:1000000, country: this.parent.parent.info[i]});
+			this.account.push({balance:initBALANCE, country: this.parent.parent.info[i]});
 		}
 	  }
 	  this.x = x;
@@ -33,14 +33,14 @@ class City {
 		let oneCoin =[];
 		for(let i =0; i < this.account.length;i++)
 		{
-			if(this.account[i].balance%1000 === 0)
+			if(this.account[i].balance%DIVISOR === 0)
 			{
-				toGiveMoney.push({balance : this.account[i].balance/1000, country: this.account[i].country});
+				toGiveMoney.push({balance : this.account[i].balance/DIVISOR, country: this.account[i].country});
 			}
 			else
 			{
-				toGiveMoney.push({balance : Math.floor(this.account[i].balance/1000), country: this.account[i].country});
-				oneCoin.push({balance : (this.account[i].balance%1000), country: this.account[i].country});
+				toGiveMoney.push({balance : Math.floor(this.account[i].balance/DIVISOR), country: this.account[i].country});
+				oneCoin.push({balance : (this.account[i].balance%DIVISOR), country: this.account[i].country});
 			}
 		}
 		if(oneCoin.length!==0)
