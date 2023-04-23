@@ -79,7 +79,7 @@ function loadData(filepath)
 			newZone.addCountry(country);		
 		});
     if(!newZone.checkAllCountries()){
-      throw Error("Не всі країни мають сусудів, що унеможливлює максимальне розповсюдження валюти.")
+      throw Error("Not all countries have courts, which makes it impossible to maximize the distribution of the currency.")
     }
 		arr.push(newZone);
 	  });

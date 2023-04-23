@@ -123,7 +123,7 @@ class Eurozone {
 	checkNeighboringNodes(rect1, rect2) {
 		// перевіряємо, чи мають прямокутні області спільні вузли
 		if (rect1.xl <= rect2.xh && rect1.xh >= rect2.xl && rect1.yl <= rect2.yh && rect1.yh >= rect2.yl) {
-		  throw new Error('Прямокутні області мають спільні вузли!');
+		  throw new Error('Rectangular areas have common nodes!');
 		}
 		// перевіряємо, чи мають прямокутні області сусідні вузли
 		if (

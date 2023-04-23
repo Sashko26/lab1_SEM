@@ -2,10 +2,10 @@ const City = require('./city');
 class Country {
 	constructor( name ,xl, yl, xh, yh, parent) {
 	  if (xl < 1 || xl > 10 || yl < 1 || yl > 10 || xh < 1 || xh > 10 || yh < 1 || yh > 10) {
-		throw new Error("Некоректні координати країни. Введіть координати в діапазоні від 1 до 10.");
+		throw new Error("Invalid country coordinates. Enter coordinates in the range from 1 to 10.");
 	  }
 	  if (xl > xh || yl > yh) {
-		throw new Error("Некоректний діапазон координат. Переконайтеся, що xl <= xh та yl <= yh.");
+		throw new Error("The coordinate range is incorrect. Make sure that xl <= xh and yl <= yh.");
 	  }
 	  this.parent = parent;
 	  this.name = name;

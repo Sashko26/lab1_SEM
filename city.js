@@ -2,7 +2,7 @@ class City {
 	constructor(x, y, parent)
 	{
 	  if (x < 1 || x > 10 || y < 1 || y > 10) {
-		throw new Error("Некоректні координати міста. Введіть координати в діапазоні від 1 до 10.");
+		throw new Error("Incorrect city coordinates. Enter coordinates in the range from 1 to 10.");
 	  } 
 	  this.parent = parent;
 	  this.account = [];
@@ -94,16 +94,6 @@ class City {
 		}
 	}
   }
-  // Функція для випадкового вибору з використанням масиву ваг
-  function weightedRandom(weights) {
-	let sum = weights.reduce((acc, cur) => acc + cur, 0);
-	let rand = Math.random() * sum;
-	for (let i = 0; i < weights.length; i++) {
-	rand -= weights[i];
-	if (rand < 0) {
-		return i;
-	}
-	}
-}
+
   module.exports = City;
   
